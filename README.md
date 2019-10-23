@@ -1,8 +1,10 @@
-Prerequisites
+# Prerequisites
 
 Docker desktop
+Nodejs
+AWS CDK
 
-Compiling the code
+# Compiling the code
 
 npm build
 
