@@ -6,7 +6,7 @@
   },
   "scripts": {
     "clean":"rm ./tmp -rf; mkdir tmp",
-    "build": "git clone https://github.com/zappan/ghostscript-lambda-layer.git ./tmp/ghostscript-lambda-layer && cd ./tmp/ghostscript-lambda-layer/ && make all && zip -r ../gs.zip result/* && exit 0",
+    "build": "git clone https://github.com/zappan/ghostscript-lambda-layer.git ./tmp/ghostscript-lambda-layer && npm install && cd ./tmp/ghostscript-lambda-layer/ && make all && zip -r ../gs.zip result/* && exit 0",
     "deploy":"cdk bootstrap && cdk deploy",
     "cdk": "cdk",
     "test": "jest"
