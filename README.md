@@ -1,3 +1,13 @@
+Prerequisites
+
+Docker desktop
+
+Compiling the code
+
+npm build
+
+
+
 # Useful commands
 
  * `npm run test`         perform the jest unit tests
