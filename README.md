@@ -1,9 +1,9 @@
 # Prerequisites
 
   Docker desktop
-  Nodejs
-  AWS CDK
-  AWSCLI: aws configure
+<br />  Nodejs
+<br />  AWS CDK
+<br />  AWSCLI: aws configure
 
 # Compiling the code
 
