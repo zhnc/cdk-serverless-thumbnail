@@ -1,18 +1,12 @@
 # Prerequisites
 
-Docker desktop
-Nodejs
-AWS CDK
+  Docker desktop
+  Nodejs
+  AWS CDK
 
 # Compiling the code
 
-npm build
+
+  npm run clean && npm run build && npm run deploy
 
 
-
-# Useful commands
-
- * `npm run test`         perform the jest unit tests
- * `cdk deploy`           deploy this stack to your default AWS account/region
- * `cdk diff`             compare deployed stack with current state
- * `cdk synth`            emits the synthesized CloudFormation template
