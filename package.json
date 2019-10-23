@@ -5,7 +5,8 @@
     "thumbnail": "bin/thumbnail.js"
   },
   "scripts": {
-    "build": "echo \"The build step is not required when using JavaScript!\" && exit 0",
+    "clear":"rm ./tmp -rf; mkdir tmp",
+    "build": "git clone https://github.com/zappan/ghostscript-lambda-layer.git ./tmp/ghostscript-lambda-layer && cd ./tmp/ghostscript-lambda-layer/ && make all && zip -r ../gs.zip result/* && exit 0",
     "cdk": "cdk",
     "test": "jest"
   },
@@ -16,6 +17,13 @@
     "jest": "^24.9.0"
   },
   "dependencies": {
-    "@aws-cdk/core": "^1.14.0"
+    "@aws-cdk/aws-iam": "^1.14.0",
+    "@aws-cdk/aws-lambda": "^1.14.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.14.0",
+    "@aws-cdk/aws-logs": "^1.14.0",
+    "@aws-cdk/aws-s3": "^1.14.0",
+    "@aws-cdk/aws-s3-notifications": "^1.14.0",
+    "@aws-cdk/core": "^1.14.0",
+    "path": "^0.12.7"
   }
 }
