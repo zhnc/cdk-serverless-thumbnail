@@ -5,10 +5,10 @@
     "thumbnail": "bin/thumbnail.js"
   },
   "scripts": {
-    "clean":"rm ./tmp -rf; mkdir tmp",
-    "ghostscript": "git clone https://github.com/zappan/ghostscript-lambda-layer.git ./tmp/ghostscript-lambda-layer && cd ./tmp/ghostscript-lambda-layer/ && make all && cd result/ && zip -r ../../gs.zip * && exit 0",
+    "clean": "rm ./tmp -rf; mkdir tmp",
+    "ghostscript": "git clone https://github.com/zappan/ghostscript-lambda-layer.git ./tmp/ghostscript-lambda-layer && cd ./tmp/ghostscript-lambda-layer/ && sed -r -i 's/github.*/zhnc-static-accelerate.s3-ap-southeast-1.amazonaws.com\\/ghostscript-9.27.tar.gz/g' Makefile_gs && make all && cd result/ && zip -r ../../gs.zip * && exit 0",
     "build": "npm install",
-    "deploy":"cdk bootstrap && cdk deploy",
+    "deploy": "cdk bootstrap && cdk deploy",
     "cdk": "cdk",
     "test": "jest"
   },
