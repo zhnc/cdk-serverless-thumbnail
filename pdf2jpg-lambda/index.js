@@ -11,7 +11,7 @@ exports.handler = function (eventObject, context) {
     console.log('eventObject', eventObject);;
 	const eventRecord = eventObject.Records && eventObject.Records[0],
 		inputBucket = eventRecord.s3.bucket.name,
-		key = eventRecord.s3.object.key,
+		key = decodeURI(eventRecord.s3.object.key),
 		id = context.awsRequestId,
 		resultKey = 'thumbnail/' + key.replace(/\.[^.]+$/, EXTENSION),
 		workdir = os.tmpdir(),
